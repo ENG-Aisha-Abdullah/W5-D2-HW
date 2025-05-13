@@ -31,7 +31,8 @@ fetch('https://6821b690259dad2655b050b9.mockapi.io/api/ToDo')
             edit.innerText = "Edit"
 
             del.addEventListener("click", () => {
-                let confirmDelete = confirm("هل أنت متأكد أنك تريد حذف هذه المهمة؟");
+                let confirmDelete = confirm(`are you sure want to delet this mission?
+- ${element.text}`);
                 if (confirmDelete) {
                     fetch(`https://6821b690259dad2655b050b9.mockapi.io/api/ToDo/${element.id}`, {
                         method: 'DELETE',
